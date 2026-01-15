@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How OPTERRA built a custom funding intelligence platform with Claude Code - tracking 83+ opportunities, saving $57K annually, and replacing external consultants with automated research.">
+    <meta name="author" content="Marcus Gilmore, OPTERRA Energy Services">
+    <meta property="og:title" content="Use Case 2: Research Automation - OPTERRA E3 Demo">
+    <meta property="og:description" content="Weekend AI project replacing $60K/year consultant - 83+ funding opportunities tracked with automated intelligence platform.">
+    <meta property="og:type" content="article">
+    <title>Use Case 2: Research Automation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="assets.html/opterra-logo.png" alt="OPTERRA Energy Services">
+        <nav>
+            <a href="index.html" aria-label="Return to overview page">← Back to Overview</a>
+        </nav>
+    </header>
+
+    <main class="use-case">
+        <div class="use-case-header">
+            <span class="level-badge">Intermediate</span>
+            <h1>Research Automation</h1>
+            <p class="subtitle" role="doc-subtitle">Building custom intelligence systems with AI assistance</p>
+        </div>
+
+        <section class="situation">
+            <h2>The Situation</h2>
+            <div class="content-block">
+                <p><strong>The Challenge:</strong> BD team needed funding opportunity intelligence but existing solutions were inadequate.</p>
+                
+                <div class="comparison-table">
+                    <h3>What We Had (External Consultant)</h3>
+                    <ul>
+                        <li><strong>Cost:</strong> ~$5K/month ($60K annually)</li>
+                        <li><strong>Coverage:</strong> ~40 opportunities (transportation/mobility focus only)</li>
+                        <li><strong>Update frequency:</strong> Bi-weekly email reports</li>
+                        <li><strong>Technology scope:</strong> Limited to EV charging, transit electrification</li>
+                        <li><strong>Actionability:</strong> Generic summaries, required manual follow-up research</li>
+                    </ul>
+
+                    <h3>What We Needed</h3>
+                    <ul>
+                        <li><strong>Full ESCO portfolio:</strong> EV, Solar, BESS, HVAC, Lighting, Building Envelope, Microgrids, etc.</li>
+                        <li><strong>Real-time updates:</strong> Know about opportunities when they're posted, not weeks later</li>
+                        <li><strong>Strategic intelligence:</strong> "Funding stacking" guidance (how to layer multiple programs)</li>
+                        <li><strong>Searchable/filterable:</strong> BD team can explore by client type, technology, deadline</li>
+                        <li><strong>Cost-effective:</strong> Better value than $60K/year</li>
+                    </ul>
+                </div>
+
+                <p><strong>The Question:</strong> Could we build our own intelligence system rather than rely on external consultants?</p>
+            </div>
+        </section>
+
+        <section class="approach">
+            <h2>The AI-Assisted Build Process</h2>
+
+            <div class="privacy-note">
+                <h4>🔒 Enterprise Tool Requirements</h4>
+                <p><strong>This funding platform was built using Claude Code (paid professional account) with verified privacy protections.</strong></p>
+                <p>When building automation tools that process company data:</p>
+                <ul>
+                    <li>Work with IT to identify approved platforms</li>
+                    <li>Ensure proper data handling agreements are in place</li>
+                    <li>Document what data the tool accesses and stores</li>
+                    <li>Get manager approval before deployment</li>
+                </ul>
+                <p><strong>The AI Community of Practice can help navigate these requirements.</strong></p>
+            </div>
+
+            <div class="methodology">
+                <h3>Phase 1: Proof of Concept (Weekend 1)</h3>
+                <div class="step-content">
+                    <p><strong>Starting point:</strong> Used Claude Code (AI pair programming tool) to build initial web scraper</p>
+                    
+                    <div class="code-example">
+                        <p><strong>What I told Claude Code:</strong></p>
+                        <div class="prompt-box">
+                            <p><em>"I need to scrape the California Energy Commission funding opportunities page and extract: title, deadline, amount, status, and program type. Store results in CSV format."</em></p>
+                        </div>
+                    </div>
+
+                    <p><strong>What Claude Code did:</strong></p>
+                    <ul>
+                        <li>Created Python scraper in ~15 minutes</li>
+                        <li>Handled HTML parsing and data extraction</li>
+                        <li>Built CSV export functionality</li>
+                        <li>Added error handling</li>
+                    </ul>
+
+                    <p><strong>First results:</strong> 10 CEC opportunities extracted successfully</p>
+                    <p><strong>Validation:</strong> "This actually works. Let's expand scope."</p>
+                </div>
+
+                <h3>Phase 2: Expansion (Weekend 1-2)</h3>
+                <div class="step-content">
+                    <p><strong>Added 5 more sources with Claude Code:</strong></p>
+                    <ul>
+                        <li>California Air Resources Board (CARB)</li>
+                        <li>PG&E business programs</li>
+                        <li>Southern California Edison (SCE)</li>
+                        <li>San Diego Gas & Electric (SDG&E)</li>
+                        <li>Sacramento Municipal Utility District (SMUD)</li>
+                    </ul>
+
+                    <p><strong>Built "relevance scoring" system:</strong></p>
+                    <div class="prompt-box">
+                        <p><em>"Create a scoring algorithm (0-100) that ranks opportunities by relevance to OPTERRA's work. High scores for: K-12 schools, municipalities, EV+BESS+Solar combinations, CEC/CARB programs. Lower scores for: residential-only, federal grants requiring research focus."</em></p>
+                    </div>
+
+                    <p><strong>Results after expansion:</strong></p>
+                    <ul>
+                        <li>83+ opportunities tracked (vs ~40 previously)</li>
+                        <li>Full ESCO technology coverage</li>
+                        <li>Intelligent prioritization (60+ score = high priority)</li>
+                    </ul>
+                </div>
+
+                <h3>Phase 3: Production Features (Week 2)</h3>
+                <div class="step-content">
+                    <p><strong>Added with Claude Code assistance:</strong></p>
+                    <ul>
+                        <li><strong>Daily automation:</strong> Scheduled scraper runs, change detection</li>
+                        <li><strong>Email alerts:</strong> Notify team of new high-priority opportunities (60+ score)</li>
+                        <li><strong>Web dashboard:</strong> Searchable/filterable interface for BD team</li>
+                        <li><strong>"Funding stacking" intelligence:</strong> AI analyzes which programs can be layered (e.g., SGIP + Federal ITC + Utility incentives for solar+storage projects)</li>
+                        <li><strong>Data management:</strong> Version control, 365-day retention, error logging</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="screenshot-section">
+                <h3>What the Platform Looks Like</h3>
+                
+                <div class="screenshot-container">
+                    <img src="assets.html/screenshots/funding-dashboard.png" alt="Funding intelligence platform dashboard showing 83 total opportunities, 81 active, 18 high priority with real-time metrics">
+                    <p class="caption"><strong>Dashboard View:</strong> 83 total opportunities, 81 active, 18 high priority (60+ relevance score), 33.3 average score. Real-time metrics updated daily.</p>
+                </div>
+
+                <div class="screenshot-container">
+                    <img src="assets.html/screenshots/funding-matching.png" alt="Search and filter interface with options for project type, client type, budget range, technology and deadline filters">
+                    <p class="caption"><strong>Search & Filter Interface:</strong> Filter by project type (Transit Electrification, Solar+Storage, Building Efficiency, etc.), client type (K-12, Municipal, Transit Agency), budget range, technology, deadline. Smart matching shows why each opportunity scored as relevant.</p>
+                </div>
+
+                <div class="screenshot-container">
+                    <img src="assets.html/screenshots/funding-results.png" alt="Funding results displaying priority scores of 96, 95, and 90 out of 100 with match reasoning and program details">
+                    <p class="caption"><strong>Results Display:</strong> Priority scoring (96/100, 95/100, 90/100), match reasoning ("Strong K-12 focus, Solar+BESS combination, CEC program"), active status, one-click access to program details.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="outcome">
+            <h2>The Outcome</h2>
+            <div class="result-box">
+                <div class="result-metrics">
+                    <div class="metric">
+                        <h3>83+</h3>
+                        <p>Opportunities Tracked</p>
+                        <span class="comparison">vs ~40 previously</span>
+                    </div>
+                    <div class="metric">
+                        <h3>$57K</h3>
+                        <p>Annual Savings</p>
+                        <span class="comparison">95% cost reduction</span>
+                    </div>
+                    <div class="metric">
+                        <h3>2x</h3>
+                        <p>Coverage Increase</p>
+                        <span class="comparison">Full ESCO portfolio</span>
+                    </div>
+                    <div class="metric">
+                        <h3>Real-time</h3>
+                        <p>Updates</p>
+                        <span class="comparison">vs bi-weekly reports</span>
+                    </div>
+                </div>
+
+                <div class="result-details">
+                    <p><strong>Operational Impact:</strong></p>
+                    <ul>
+                        <li><strong>BD team time savings:</strong> 5-10 hours/week of manual research eliminated</li>
+                        <li><strong>Opportunity discovery:</strong> Finding programs we wouldn't have known about</li>
+                        <li><strong>Strategic intelligence:</strong> "Funding stacking" guidance helps maximize client value</li>
+                        <li><strong>Competitive advantage:</strong> Real-time awareness vs competitors relying on consultants</li>
+                    </ul>
+
+                    <p><strong>Cost Structure:</strong></p>
+                    <ul>
+                        <li><strong>Development:</strong> ~2 days with Claude Code (weekend project)</li>
+                        <li><strong>Hosting:</strong> $200-300/month Azure (estimated for production deployment)</li>
+                        <li><strong>Maintenance:</strong> Minimal (automated monitoring, error alerts)</li>
+                        <li><strong>Total annual:</strong> ~$3K vs $60K consultant</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="what-you-can-learn">
+            <h2>What You Can Learn From This</h2>
+
+            <div class="learning-blocks">
+                <div class="learning-block">
+                    <h3>🛠️ Claude Code Makes This Accessible</h3>
+                    <p>I'm not a professional developer. Claude Code did the heavy lifting:</p>
+                    <ul>
+                        <li><strong>Web scraping:</strong> Told it which sites, it built the scrapers</li>
+                        <li><strong>Data processing:</strong> Described what I needed extracted, it handled parsing</li>
+                        <li><strong>Dashboard:</strong> Showed examples of what I wanted, it built the interface</li>
+                        <li><strong>Automation:</strong> Explained scheduling needs, it implemented cron jobs</li>
+                    </ul>
+                    <p><strong>Key insight:</strong> You don't write code. You describe what you want, Claude Code builds it, you test and refine.</p>
+                </div>
+
+                <div class="learning-block">
+                    <h3>🎯 Start Simple, Build Incrementally</h3>
+                    <p>Success came from not trying to build everything at once:</p>
+                    <ol>
+                        <li><strong>Weekend 1:</strong> One scraper, one source, prove concept works</li>
+                        <li><strong>Weekend 2:</strong> Add more sources, build relevance scoring</li>
+                        <li><strong>Week 2:</strong> Add automation, alerts, dashboard</li>
+                        <li><strong>Ongoing:</strong> Refine based on BD team feedback</li>
+                    </ol>
+                    <p><strong>Each step validated before adding complexity.</strong> Never spent more than a few hours without confirming value.</p>
+                </div>
+
+                <div class="learning-block">
+                    <h3>💰 Custom Often Beats SaaS</h3>
+                    <p>Why this worked better than consultant or off-the-shelf software:</p>
+                    <ul>
+                        <li><strong>Exact fit:</strong> Built for OPTERRA's specific technology mix and client types</li>
+                        <li><strong>Full control:</strong> Add sources, adjust scoring, change interface based on our needs</li>
+                        <li><strong>Cost efficiency:</strong> 95% cheaper than consultant, more coverage than SaaS</li>
+                        <li><strong>Integration potential:</strong> Can connect to CRM, proposal tools, whatever we need</li>
+                    </ul>
+                    <p><strong>The question isn't "should we buy software?" but "is this automatable?"</strong> If yes, Claude Code can probably build it.</p>
+                </div>
+
+                <div class="learning-block">
+                    <h3>🔄 Replicable for Any Systematic Research</h3>
+                    <p>This same approach works for:</p>
+                    <ul>
+                        <li><strong>Competitive intelligence:</strong> Track competitor wins, press releases, project announcements</li>
+                        <li><strong>Regulatory monitoring:</strong> Utility rate changes, building codes, energy policies</li>
+                        <li><strong>Market research:</strong> New technology announcements, industry trends</li>
+                        <li><strong>Client intelligence:</strong> School district budgets, municipal energy plans</li>
+                    </ul>
+                    <p><strong>The pattern:</strong> If you're manually checking websites regularly, Claude Code can automate it.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="your-first-step">
+            <h2>Your First Step (If This Interests You)</h2>
+            <div class="first-step-box">
+                <h3>Try This Next Week:</h3>
+                <ol>
+                    <li><strong>Identify one research task you do repeatedly</strong> (checking websites, gathering data from multiple sources, monitoring for changes)</li>
+                    <li><strong>Get Claude Code access</strong> (Available in Claude Pro subscription at claude.ai)</li>
+                    <li><strong>Describe the simplest version of what you want:</strong> "I need to scrape [website] and extract [specific data] into a CSV file"</li>
+                    <li><strong>Let Claude Code build it</strong> (it will create the code, run it, show you results)</li>
+                    <li><strong>Test if it works</strong> (review the output, identify issues)</li>
+                    <li><strong>Iterate:</strong> "Good, now also extract [additional field]" or "The dates aren't parsing correctly, can you fix that?"</li>
+                </ol>
+                <p><strong>Start with something that takes you 30 minutes weekly.</strong> If you can automate that, you've saved 26 hours annually. Build from there.</p>
+                
+                <div class="resource-box">
+                    <p><strong>Resources to help you start:</strong></p>
+                    <ul>
+                        <li>Claude Code tutorial: <a href="https://docs.claude.com">docs.claude.com</a></li>
+                        <li>Example prompts for common automation tasks (available after presentation)</li>
+                        <li>OPTERRA AI CoP office hours for hands-on help</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <nav class="use-case-nav">
+            <a href="use-case-1.html" class="nav-button" aria-label="Go to Use Case 1: Strategic Document Analysis">← Previous: RFP Strategy</a>
+            <a href="use-case-3.html" class="nav-button next" aria-label="Continue to Use Case 3: Preliminary Technical Analysis">Next: Engineering Acceleration →</a>
+        </nav>
+    </main>
+
+    <footer>
+        <p>OPTERRA Engineering Exchange Conference 2026</p>
+    </footer>
+</body>
+</html>

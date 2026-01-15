@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive BESS sizing calculator built with AI assistance - delivering engineering-validated preliminary assessments in minutes instead of days. Try the live demo.">
+    <meta name="author" content="Marcus Gilmore, OPTERRA Energy Services">
+    <meta property="og:title" content="Use Case 3: Engineering Acceleration - OPTERRA E3 Demo">
+    <meta property="og:description" content="Live interactive tool: AI-assisted BESS calculator providing engineering-validated preliminary assessments in minutes vs days.">
+    <meta property="og:type" content="article">
+    <title>Use Case 3: Engineering Acceleration</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <header>
+        <img src="assets.html/opterra-logo.png" alt="OPTERRA Energy Services">
+        <nav>
+            <a href="index.html" aria-label="Return to overview page">← Back to Overview</a>
+        </nav>
+    </header>
+
+    <main class="use-case">
+        <div class="use-case-header">
+            <span class="level-badge">Advanced (Interactive Demo)</span>
+            <h1>Engineering Acceleration</h1>
+            <p class="subtitle" role="doc-subtitle">Using AI to remove preliminary assessment bottlenecks</p>
+        </div>
+
+        <section class="situation">
+            <h2>The Situation</h2>
+            <div class="content-block">
+                <p><strong>Project:</strong> School District Electric Bus Fleet Electrification</p>
+                <ul>
+                    <li>Client considering transition to electric school buses</li>
+                    <li>Needed preliminary BESS (Battery Energy Storage System) sizing</li>
+                    <li>Required for feasibility assessment and budget planning</li>
+                    <li>Multiple scenarios to explore (different peak shaving targets)</li>
+                </ul>
+                
+                <p><strong>The Challenge:</strong> Engineering team backlogged with active projects.</p>
+                
+                <div class="challenge-box">
+                    <p><strong>Typical timeline for preliminary BESS assessment:</strong> 3-5 days</p>
+                    <ul>
+                        <li>Day 1: Gather fleet data, understand operational patterns</li>
+                        <li>Day 2-3: Model load profiles, calculate energy requirements</li>
+                        <li>Day 3-4: Size BESS (power and energy ratings)</li>
+                        <li>Day 4-5: Economic analysis, create client presentation</li>
+                    </ul>
+                    
+                    <p><strong>The problem:</strong> Client needs quick feasibility response to decide whether to pursue full RFP. Can't wait a week for preliminary numbers.</p>
+                    
+                    <p><strong>The risk:</strong> If we respond slowly, client moves on to competitors who can provide faster preliminary guidance.</p>
+                </div>
+
+                <p><strong>The Question:</strong> Could AI help accelerate preliminary technical analysis without sacrificing quality?</p>
+            </div>
+        </section>
+
+        <section class="approach">
+            <h2>The AI-Assisted Approach</h2>
+
+            <div class="methodology">
+                <h3>The Build Process (With Claude Code)</h3>
+                <div class="step-content">
+                    <p><strong>What I wanted:</strong> Interactive tool that lets clients explore different BESS sizing scenarios in real-time.</p>
+                    
+                    <p><strong>Requirements:</strong></p>
+                    <ul>
+                        <li>Calculate BESS energy requirements (kWh) for different peak shaving targets</li>
+                        <li>Calculate BESS power requirements (kW)</li>
+                        <li>Show economic payback estimates</li>
+                        <li>Visualize load profile with/without BESS</li>
+                        <li>Update everything in real-time as user adjusts targets</li>
+                    </ul>
+
+                    <div class="build-timeline">
+                        <h4>Development Timeline (Working with Claude in Late 2024)</h4>
+                        <p><em>Note: This was before Claude Code - built with artifact and manual refinement. With Claude Code today, this would be even faster.</em></p>
+                        
+                        <p><strong>Evening 1 (3 hours):</strong></p>
+                        <ul>
+                            <li>Described problem to Claude: "I need to calculate BESS sizing for peak shaving"</li>
+                            <li>Claude created interactive artifact with basic calculations</li>
+                            <li>Tested with real fleet data - calculations looked reasonable</li>
+                            <li>Validated energy conservation (total energy in = total energy out)</li>
+                        </ul>
+
+                        <p><strong>Evening 2 (2 hours):</strong></p>
+                        <ul>
+                            <li>Asked Claude to add visualizations (load profile charts)</li>
+                            <li>Refined economic calculations (payback period)</li>
+                            <li>Added multiple peak target options (30, 40, 50, 60, 70 kW)</li>
+                            <li>Tested all scenarios - looked good</li>
+                        </ul>
+
+                        <p><strong>Evening 3 (2 hours):</strong></p>
+                        <ul>
+                            <li>Asked Claude to add BESS sizing requirements chart</li>
+                            <li>Polished UI - made buttons clearer, improved layout</li>
+                            <li>Created example with school bus fleet data</li>
+                            <li>Shared with engineering team for validation</li>
+                        </ul>
+
+                        <p><strong>Day 4:</strong></p>
+                        <ul>
+                            <li>Engineering team reviewed calculations</li>
+                            <li>Confirmed: "Sizing is comparable to what we would recommend"</li>
+                            <li>Noted: "This is preliminary - final design needs detailed engineering"</li>
+                            <li>Validated: Tool is appropriate for feasibility phase</li>
+                        </ul>
+                    </div>
+
+                    <p><strong>Total time investment:</strong> ~7 hours over 3 evenings</p>
+                    <p><strong>Outcome:</strong> Production-ready preliminary assessment tool</p>
+                </div>
+
+                <h3>The Engineering Methodology</h3>
+                <div class="privacy-note">
+                    <h4>💡 Building Tools Safely</h4>
+                    <p>This calculator was built with AI assistance using anonymized load profile data (no client identifiers).</p>
+                    <p><strong>Best practices for AI-assisted tool development:</strong></p>
+                    <ul>
+                        <li>Start with generic examples or synthetic data</li>
+                        <li>Remove client names and project identifiers</li>
+                        <li>Use OPTERRA-approved development tools</li>
+                        <li>Have engineering team validate methodology before client use</li>
+                    </ul>
+                    <p><strong>Preliminary assessment tools can be built safely with privacy-protected platforms.</strong></p>
+                </div>
+
+                <div class="step-content">
+                    <p><strong>How the calculations work:</strong></p>
+                    
+                    <div class="methodology-box">
+                        <p><strong>Input:</strong> Electric bus fleet load profile (15-minute intervals over 24 hours)</p>
+                        <p><strong>For each peak shaving target (e.g., 50 kW):</strong></p>
+                        <ol>
+                            <li><strong>Calculate excess power:</strong> For each 15-min interval, find power above target
+                                <br><em>Excess = max(0, Original_Demand - Target_Peak)</em>
+                            </li>
+                            <li><strong>Calculate excess energy:</strong> Energy that BESS must store
+                                <br><em>Excess_Energy = Excess_Power × 0.25 hours</em>
+                            </li>
+                            <li><strong>Sum total energy:</strong> How much storage capacity needed
+                                <br><em>Required_BESS_Energy = Σ(Excess_Energy)</em>
+                            </li>
+                            <li><strong>Find maximum power:</strong> BESS power rating needed
+                                <br><em>Required_BESS_Power = max(Excess_Power)</em>
+                            </li>
+                            <li><strong>Estimate costs:</strong> BESS cost and annual savings
+                                <br><em>Simple_Payback = BESS_Cost / Annual_Savings</em>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <p><strong>Why this methodology works:</strong></p>
+                    <ul>
+                        <li>Based on established power systems engineering principles</li>
+                        <li>Uses standard 15-minute interval data (industry norm)</li>
+                        <li>Conservative assumptions (oversizes slightly for safety)</li>
+                        <li>Appropriate for preliminary feasibility, not final design</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="interactive-demo">
+            <h2>🎯 Live Interactive Tool</h2>
+            <p class="demo-intro">This is the actual tool used for preliminary assessments. Try different peak shaving targets to see how BESS requirements change.</p>
+
+            <div class="bess-calculator" role="region" aria-label="Interactive BESS sizing calculator">
+                <div class="calculator-header">
+                    <h3>BESS Sizing Calculator</h3>
+                    <p>Electric School Bus Fleet Example (Daily Load Profile)</p>
+                </div>
+
+                <div class="target-selection">
+                    <h4>Select Peak Shaving Target:</h4>
+                    <p class="helper-text">Choose how much you want to reduce the peak demand. Lower targets require more BESS capacity.</p>
+                    <div class="target-buttons">
+                        <button class="target-btn" data-target="30" onclick="calculateBESS(30)" aria-label="Calculate BESS requirements for 30 kilowatt peak target">30 kW</button>
+                        <button class="target-btn" data-target="40" onclick="calculateBESS(40)" aria-label="Calculate BESS requirements for 40 kilowatt peak target">40 kW</button>
+                        <button class="target-btn active" data-target="50" onclick="calculateBESS(50)" aria-label="Calculate BESS requirements for 50 kilowatt peak target, currently selected">50 kW</button>
+                        <button class="target-btn" data-target="60" onclick="calculateBESS(60)" aria-label="Calculate BESS requirements for 60 kilowatt peak target">60 kW</button>
+                        <button class="target-btn" data-target="70" onclick="calculateBESS(70)" aria-label="Calculate BESS requirements for 70 kilowatt peak target">70 kW</button>
+                    </div>
+                </div>
+
+                <div class="results-grid">
+                    <div class="result-card energy">
+                        <div class="result-icon">🔋</div>
+                        <div class="result-content">
+                            <h4>Required BESS Energy</h4>
+                            <p class="result-value" id="energy-result">202.5 kWh</p>
+                            <p class="result-detail">Total storage capacity needed</p>
+                        </div>
+                    </div>
+
+                    <div class="result-card power">
+                        <div class="result-icon">⚡</div>
+                        <div class="result-content">
+                            <h4>Required BESS Power</h4>
+                            <p class="result-value" id="power-result">30.7 kW</p>
+                            <p class="result-detail">Maximum charge/discharge rate</p>
+                        </div>
+                    </div>
+
+                    <div class="result-card payback">
+                        <div class="result-icon">💰</div>
+                        <div class="result-content">
+                            <h4>Simple Payback Period</h4>
+                            <p class="result-value" id="payback-result">3.5 years</p>
+                            <p class="result-detail">Based on demand charge savings</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="charts-container">
+                    <div class="chart-wrapper">
+                        <h4>Load Profile with Peak Shaving</h4>
+                        <p class="chart-description">Blue shows original demand, green shows load after BESS peak shaving. Red line is target peak.</p>
+                        <canvas id="loadProfileChart" aria-label="Chart showing electric bus fleet load profile over 24 hours with and without BESS peak shaving"></canvas>
+                    </div>
+
+                    <div class="chart-wrapper">
+                        <h4>BESS Sizing Requirements vs. Target Peak</h4>
+                        <p class="chart-description">Shows how BESS energy and power needs change with different peak targets.</p>
+                        <canvas id="bessSizingChart" aria-label="Chart showing BESS energy and power requirements for different peak shaving targets from 30 to 70 kilowatts"></canvas>
+                    </div>
+
+                    <div class="chart-wrapper">
+                        <h4>Economic Analysis by Target Peak</h4>
+                        <p class="chart-description">Cost comparison and payback periods for different BESS configurations.</p>
+                        <canvas id="economicsChart" aria-label="Chart showing BESS costs and simple payback periods for different peak shaving targets"></canvas>
+                    </div>
+                </div>
+
+                <div class="calculation-note">
+                    <p><strong>Note:</strong> These are preliminary estimates for feasibility assessment. Final BESS sizing requires detailed engineering analysis accounting for:</p>
+                    <ul>
+                        <li>Specific equipment specifications and efficiency curves</li>
+                        <li>Actual utility rate structures and demand charge calculations</li>
+                        <li>Environmental conditions (temperature impacts on battery performance)</li>
+                        <li>Future load growth and operational changes</li>
+                        <li>Grid interconnection requirements and utility approval</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="outcome">
+            <h2>The Outcome</h2>
+            <div class="result-box">
+                <div class="result-headline">
+                    <h3>Engineering Team Validated: "Sizing is Comparable"</h3>
+                    <p>Several days after preliminary tool assessment, engineering team completed detailed analysis and confirmed BESS sizing was in the right range.</p>
+                </div>
+
+                <div class="result-details">
+                    <p><strong>What this proved:</strong></p>
+                    <ul>
+                        <li><strong>Speed advantage:</strong> Minutes vs days for preliminary assessment</li>
+                        <li><strong>Quality maintained:</strong> Engineering-level accuracy for feasibility phase</li>
+                        <li><strong>Interactive value:</strong> Client can explore scenarios in real-time</li>
+                        <li><strong>Bottleneck removed:</strong> Preliminary assessments no longer delay RFP responses</li>
+                    </ul>
+
+                    <p><strong>Real-world impact:</strong></p>
+                    <ul>
+                        <li><strong>Faster client responses:</strong> Same-day feasibility assessments vs week-long waits</li>
+                        <li><strong>More opportunities pursued:</strong> Can respond to more preliminary inquiries</li>
+                        <li><strong>Better client conversations:</strong> Interactive exploration vs static reports</li>
+                        <li><strong>Engineering team focus:</strong> Detailed design for committed projects, not endless preliminary assessments</li>
+                    </ul>
+
+                    <p><strong>Boss reaction:</strong> <em>"One of the challenges has been the amount of time it takes to do analyses for preliminary assessments and RFPs, so my boss thought this was cool since turnaround has been a challenge."</em></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="what-you-can-learn">
+            <h2>What You Can Learn From This</h2>
+
+            <div class="learning-blocks">
+                <div class="learning-block">
+                    <h3>🎯 AI Excels at "Established Methodology" Problems</h3>
+                    <p>This worked because BESS sizing follows known engineering principles:</p>
+                    <ul>
+                        <li>The physics is established (energy storage = excess power × time)</li>
+                        <li>The methodology is documented (15-minute intervals, peak shaving calculations)</li>
+                        <li>The validation is straightforward (engineering team can verify)</li>
+                        <li>The complexity is computational, not conceptual</li>
+                    </ul>
+                    <p><strong>Look for similar patterns in your work:</strong> Where do you apply established methodology repetitively? That's automatable.</p>
+                </div>
+
+                <div class="learning-block">
+                    <h3>🔧 Interactive > Static Reports</h3>
+                    <p>The tool's value isn't just speed - it's interactivity:</p>
+                    <ul>
+                        <li><strong>Client exploration:</strong> "What if we target 60 kW instead of 50?" → Click → See results</li>
+                        <li><strong>Trade-off understanding:</strong> Visual demonstration of cost vs. benefit</li>
+                        <li><strong>Informed decisions:</strong> Client participates in analysis, not just receives results</li>
+                        <li><strong>Credibility building:</strong> Transparency creates trust</li>
+                    </ul>
+                    <p><strong>Consider:</strong> Could your analysis become interactive exploration rather than static presentation?</p>
+                </div>
+
+                <div class="learning-block">
+                    <h3>⚠️ Know the Boundaries</h3>
+                    <p>This is preliminary assessment, NOT final design:</p>
+                    <ul>
+                        <li><strong>Appropriate for:</strong> Feasibility studies, budget planning, go/no-go decisions</li>
+                        <li><strong>NOT appropriate for:</strong> Final specifications, construction documents, utility approval</li>
+                        <li><strong>Always validated by:</strong> Engineering team review before client delivery</li>
+                        <li><strong>Client understanding:</strong> Clear labeling as "preliminary" assessment</li>
+                    </ul>
+                    <p><strong>The rule:</strong> AI accelerates preliminary work. Engineers validate and complete detailed design.</p>
+                </div>
+
+                <div class="learning-block">
+                    <h3>🔄 Build → Validate → Refine → Deploy</h3>
+                    <p>Success came from systematic validation:</p>
+                    <ol>
+                        <li><strong>Build with AI:</strong> Created tool in ~7 hours</li>
+                        <li><strong>Validate methodology:</strong> Checked calculations manually</li>
+                        <li><strong>Engineering review:</strong> Had team verify approach</li>
+                        <li><strong>Real project test:</strong> Used on actual opportunity</li>
+                        <li><strong>Compare to detailed:</strong> Engineering team completed full analysis → Confirmed comparable</li>
+                    </ol>
+                    <p><strong>Never deploy without validation.</strong> But validation is faster than building from scratch.</p>
+                </div>
+
+                <div class="learning-block">
+                    <h3>📊 Replicable for Other Technical Analyses</h3>
+                    <p>This same approach works for:</p>
+                    <ul>
+                        <li><strong>Solar PV sizing:</strong> Roof area, energy consumption, shading analysis</li>
+                        <li><strong>HVAC load calculations:</strong> Building size, climate, efficiency targets</li>
+                        <li><strong>LED lighting ROI:</strong> Current fixtures, energy costs, rebate programs</li>
+                        <li><strong>EV charging infrastructure:</strong> Fleet size, usage patterns, utility rates</li>
+                        <li><strong>Demand response value:</strong> Load profiles, program requirements, savings potential</li>
+                    </ul>
+                    <p><strong>The pattern:</strong> If it's technical analysis you do repeatedly with established methodology, AI can build a tool for preliminary assessment.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="your-first-step">
+            <h2>Your First Step (If This Interests You)</h2>
+            <div class="first-step-box">
+                <h3>Try This When You're Ready:</h3>
+                
+                <div class="progressive-approach">
+                    <h4>Phase 1: Identify the Opportunity (This Week)</h4>
+                    <ol>
+                        <li><strong>Find one technical analysis you do repeatedly</strong> that follows established methodology</li>
+                        <li><strong>Ask:</strong> Do I apply the same calculation steps each time with different inputs?</li>
+                        <li><strong>Estimate:</strong> How much time does each analysis take? How often do we do it?</li>
+                        <li><strong>Calculate value:</strong> If preliminary version took minutes instead of days, what's the impact?</li>
+                    </ol>
+
+                    <h4>Phase 2: Describe the Problem to AI (Next Week)</h4>
+                    <ol>
+                        <li><strong>Open Claude (or Claude Code)</strong></li>
+                        <li><strong>Explain the analysis:</strong> "I need to calculate [X] based on [inputs Y and Z]"</li>
+                        <li><strong>Share the methodology:</strong> "Here's how we do it manually: [step 1, step 2, step 3]"</li>
+                        <li><strong>Request basic version:</strong> "Can you create a simple calculator that does this?"</li>
+                        <li><strong>Test with real data:</strong> Compare AI output to manual calculation</li>
+                    </ol>
+
+                    <h4>Phase 3: Refine and Validate (Following Weeks)</h4>
+                    <ol>
+                        <li><strong>Add interactivity:</strong> "Can you add sliders/buttons for different scenarios?"</li>
+                        <li><strong>Add visualizations:</strong> "Can you show this as a chart?"</li>
+                        <li><strong>Engineering review:</strong> Have technical team validate approach</li>
+                        <li><strong>Test on real project:</strong> Use for preliminary assessment</li>
+                        <li><strong>Compare to detailed:</strong> Does preliminary match final?</li>
+                    </ol>
+
+                    <h4>Phase 4: Deploy (When Ready)</h4>
+                    <ol>
+                        <li><strong>Document boundaries:</strong> Clear "preliminary assessment" labeling</li>
+                        <li><strong>Create user guide:</strong> How to interpret results</li>
+                        <li><strong>Train team:</strong> When to use tool vs full engineering analysis</li>
+                        <li><strong>Monitor outcomes:</strong> Track time savings and accuracy</li>
+                    </ol>
+                </div>
+
+                <div class="resource-box">
+                    <p><strong>Resources available after presentation:</strong></p>
+                    <ul>
+                        <li>Example technical analysis automation projects</li>
+                        <li>Validation checklist for engineering tools</li>
+                        <li>Claude Code templates for common calculations</li>
+                        <li>AI CoP office hours for hands-on development help</li>
+                    </ul>
+                </div>
+
+                <div class="realistic-expectations">
+                    <h4>Realistic Time Investment</h4>
+                    <p><strong>For your first technical tool:</strong></p>
+                    <ul>
+                        <li>Planning and scoping: 2-4 hours</li>
+                        <li>Building with AI: 6-10 hours (over several sessions)</li>
+                        <li>Validation and testing: 4-6 hours</li>
+                        <li>Refinement: 2-4 hours</li>
+                        <li><strong>Total: ~20 hours for first tool</strong></li>
+                    </ul>
+                    <p><strong>But then:</strong> Every similar analysis takes minutes instead of days.</p>
+                    <p><strong>Payback:</strong> If you do 10 preliminary assessments per year at 3 days each = 30 days saved annually</p>
+                </div>
+            </div>
+        </section>
+
+        <nav class="use-case-nav">
+            <a href="use-case-2.html" class="nav-button" aria-label="Go to Use Case 2: Research Automation">← Previous: Research Automation</a>
+            <a href="index.html" class="nav-button next" aria-label="Return to overview page">Back to Overview →</a>
+        </nav>
+    </main>
+
+    <footer>
+        <p>OPTERRA Engineering Exchange Conference 2026</p>
+    </footer>
+
+    <script src="bess-calculator.js"></script>
+</body>
+</html>
