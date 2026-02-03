@@ -458,15 +458,22 @@ section {
     margin: var(--spacing-lg) 0;
 }
 
+.comparison-column {
+    display: flex;
+    flex-direction: column;
+}
+
 .comparison-table h3 {
     color: var(--opterra-blue-dark);
     padding-bottom: var(--spacing-sm);
     border-bottom: 2px solid var(--opterra-blue);
+    margin-bottom: var(--spacing-sm);
 }
 
 .comparison-table ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .comparison-table li {
